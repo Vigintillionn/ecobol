@@ -1,0 +1,10 @@
+.hamburger-height {
+  height: calc(100vh - 77px);
+}
+
+
+@media screen and (max-width: 768px) {
+  .expanded ul {
+    display: block;
+  }
+}
