@@ -12,11 +12,6 @@
   src: url("../public/Fonts/MavenPro-VariableFont_wght.ttf");
 }
 
-
-.translaye-y-neg50 {
-  transform: translateY(-50%);
-}
-
 .height-without-nav {
   height: calc(100vh - 4rem);
 }
