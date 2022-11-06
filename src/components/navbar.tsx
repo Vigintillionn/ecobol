@@ -8,13 +8,13 @@ export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
-    <nav className="h-16 w-full flex items-center relative py-2 px-0 bg-white decoration-black shadow-sm md:max-lg:pl-16 lg:max-xl:pl-48 xl:pl-64">
-      <Link to="/" className="no-underline decoration-black text-xl ml-4 flex p-0 relative">
+    <nav className="h-16 w-full flex items-center relative py-2 px-0 bg-white text-black shadow-sm md:max-lg:pl-16 lg:max-xl:pl-48 xl:pl-64">
+      <Link to="/" className="no-underline text-black text-xl ml-4 flex p-0 relative">
         <img src="/Images/logo.png" className="w-10 h-auto m-0 absolute top-2/4 -translate-y-2/4" />
         <p className="ml-12 font-mavenpro font-semibold">EcoBol</p>
       </Link>
-      <button className="border-0 h-10 w-10 p-2 rounded-full bg-teal-400 cursor-pointer transition-colors ease-in-out absolute top-2/4 right-6 -translate-y-2/4 
-        hover:bg-teal-200
+      <button className="border-0 h-10 w-10 p-2 rounded-full bg-green cursor-pointer transition-colors ease-in-out absolute top-2/4 right-6 -translate-y-2/4 
+        hover:bg-green-accent
         md:hidden
         "
         onClick={() => setIsNavExpanded(!isNavExpanded)}
@@ -35,11 +35,11 @@ export default function Navbar() {
       <div className={(isNavExpanded ? "expanded" : "md:max-lg:pr-16 lg:max-xl:pr-48 xl:pr-64") + " ml-auto font-mavenpro font-semibold"}>
         <ul className="max-md:hidden max-md:absolute max-md:top-14 max-md:left-0 max-md:flex-col max-md:w-full max-md:hamburger-height max-md:border-y
             md:flex md:p-0 ">
-          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-200"><Link to="/" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Home</Link></li>
-          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-200"><Link to="/over" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Over</Link></li>
-          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-200"><Link to="/contact" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Contact</Link></li>
-          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-200"><Link to="/info" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Info</Link></li>
-          <li className="list-none mx-4 md:bg-green-400 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-200 transition-colors"><Link to="/shop" className="no-underline uppercase block w-full md:py-2 md:px-5 max-md:text-black max-md:py-6"><FontAwesomeIcon className="max-md:hidden" icon={faShoppingCart} /> Shop</Link></li>
+          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link to="/" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Home</Link></li>
+          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link to="/over" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Over</Link></li>
+          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link to="/contact" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Contact</Link></li>
+          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link to="/info" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Info</Link></li>
+          <li className="list-none mx-4 md:bg-green md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent transition-opacity"><Link to="/shop" className="no-underline uppercase block w-full md:py-2 md:px-5 max-md:text-black max-md:py-6"><FontAwesomeIcon className="max-md:hidden" icon={faShoppingCart} /> Shop</Link></li>
         </ul>
       </div>
     </nav>
