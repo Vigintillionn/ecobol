@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.css';
 
-import Layout from './pages/Layout';
-import Home from './pages/Home';
-import Over from './pages/Over';
 import Contact from './pages/Contact';
+import Home from './pages/Home';
 import Info from './pages/Info';
+import Layout from './pages/Layout';
+import Over from './pages/Over';
 import Shop from './pages/Shop';
 
 export default function App() {
