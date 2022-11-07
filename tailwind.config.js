@@ -13,10 +13,19 @@ module.exports = {
       "green-accent": "#A1C87066",
       "blue": "#6BBED2",
       "brown": "#A86223",
+      "red": "#D81159",
+      "gunmetal": "#232C33",
       "white": "#fff",
       "black": "#000"
     },
-    extend: {}
+    extend: {
+      gridTemplateColumns: {
+        "cards": "repeat(auto-fit, minmax(300px, 1fr))"
+      },
+      borderRadius: {
+        "cards": "2.5rem"
+      }
+    }
   },
   plugins: [],
 }

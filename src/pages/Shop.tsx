@@ -1,9 +1,74 @@
-import React from "react";
+import { faBriefcase, faJar, faWineBottle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import Ribbon from "../components/Ribbon";
+
 
 export default function Shop() {
+  const [stockWijnflessen, setStockWijnflessen] = useState(1);
+  const [stockWeckpotten, setStockWeckpotten] = useState(1);
+  
+  // TODO Make responsive
   return (
     <div>
-      SHOP
+      <div className="w-full text-center m-0 p-0">
+        <h1 className="pt-8 text-3xl font-mavenpro font-semibold tex">Shop</h1>
+        <p className="font-nunito text-lg">Bestel hier een van onze prachtige en klimaatvriendelijke ecobollen!</p>
+      </div>
+      <ul className="box-border grid p-0 grid-cols-cards gap-8 my-8 mb-16 mx-5vw list-none overflow-hidden">
+        <li className="relative">
+          <Ribbon text={stockWijnflessen ? "20% Korting!" : "Uitverkocht!"} />
+          <a href="/" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWijnflessen > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
+            <img src="/Images/wijnfles.png" alt="i" className="w-full h-auto" />
+            <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
+              <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
+                <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
+                <div className="shrink-0 w-12 h-12 rounded-full bg-white text-center leading-[3.25rem]"><FontAwesomeIcon className="text-3xl" icon={faWineBottle} /></div>
+                <div>
+                  <h3 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Wijnflessen</h3>
+                  <span className="text-gunmetal flex gap-2 text-lg font-nunito font-semibold"><p className="line-through text-red">€15</p> <p className="">€12 per fles</p></span>
+                </div>
+              </div>
+              <p className="pt-0 px-8 pb-8 m-0 text-black font-nunito overflow-hidden card_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+            </div>
+          </a>  
+        </li>
+        <li className="relative">
+          { stockWeckpotten <= 0 && <Ribbon text="Uitverkocht!"/> }
+          <a href="/" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWeckpotten > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
+            <img src="/Images/weckpot.png" alt="i" className="w-full h-auto" />
+            <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
+              <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
+                <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
+                <div className="shrink-0 w-12 h-12 rounded-full bg-white text-center leading-[3.25rem]"><FontAwesomeIcon className="text-3xl" icon={faJar} /></div>
+                <div>
+                  <h3 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Weckpotten</h3>
+                  <span className="text-gunmetal text-lg font-nunito font-semibold">€15 per pot</span>
+                </div>
+              </div>
+              <p className="pt-0 px-8 pb-8 m-0 text-black font-nunito overflow-hidden card_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+            </div>
+          </a>  
+        </li>
+        <li>
+          <a href="/" className="relative block h-full overflow-hidden no-underline rounded-cards group pointer-events-none cursor-default opacity-50">
+            <img src="/Images/workshops.png" alt="i" className="w-full h-auto" />
+            <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
+              <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
+                <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
+                <div className="shrink-0 w-12 h-12 rounded-full bg-white text-center leading-[3.25rem]"><FontAwesomeIcon className="text-3xl" icon={faBriefcase} /></div>
+                <div>
+                  <h3 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Workshop</h3>
+                  <span className="text-gunmetal text-lg font-nunito font-semibold">€20 voor 1u30</span>
+                </div>
+              </div>
+              <p className="pt-0 px-8 pb-8 m-0 text-black font-nunito overflow-hidden card_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+            </div>
+          </a>  
+        </li>
+      </ul>
+      <h1 className="absolute left-2/4 -translate-x-2/4 text-center overflow-x-hidden pb-48"><strong>Belangrijk!</strong> Aangezien wij een mini-onderneming van <a className="text-blue underline hover:opacity-60 transition-opacity delay-50" href="https://www.vlajo.org/" target="_blank" rel="noreferrer">VLAJO</a> zijn, kan de btw van ons product niet worden teruggetrokken. Indien u hier verdere vragen over hebt, gelieve ons te contacteren.</h1>
     </div>
   )
 }
+

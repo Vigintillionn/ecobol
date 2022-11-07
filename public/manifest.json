@@ -6,6 +6,26 @@
       "src": "logo.png",
       "sizes": "1080x1080",
       "type": "image/png"
+    },
+    {
+      "src": "placeholder.png",
+      "sizes": "800x600",
+      "type": "image/png"
+    },
+    {
+      "src": "weckpot.png",
+      "sizes": "408x425",
+      "type": "image/png"
+    },
+    {
+      "src": "wijnfles.png",
+      "sizes": "500x531",
+      "type": "image/png"
+    },
+    {
+      "src": "workshops.png",
+      "sizes": "500x500",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
