@@ -16,10 +16,6 @@
   height: calc(100vh - 4rem);
 }
 
-.mx-5vw {
-  margin-inline: 5vw;
-}
-
 .card_desc {
   display: -webkit-box;
   -webkit-box-orient: vertical;

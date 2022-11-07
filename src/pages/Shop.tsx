@@ -15,7 +15,7 @@ export default function Shop() {
         <h1 className="pt-8 text-3xl font-mavenpro font-semibold tex">Shop</h1>
         <p className="font-nunito text-lg">Bestel hier een van onze prachtige en klimaatvriendelijke ecobollen!</p>
       </div>
-      <ul className="box-border grid p-0 grid-cols-cards gap-8 my-8 mb-16 mx-5vw list-none overflow-hidden">
+      <ul className="box-border grid p-0 grid-cols-cards gap-8 my-8 mb-16 list-none overflow-hidden mx-12">
         <li className="relative">
           <Ribbon text={stockWijnflessen ? "20% Korting!" : "Uitverkocht!"} />
           <a href="/" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWijnflessen > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
