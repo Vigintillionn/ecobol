@@ -12,9 +12,11 @@ module.exports = {
       "green": "#A1C870",
       "green-accent": "#A1C87066",
       "blue": "#6BBED2",
+      "blue-darker": "#246878",
       "brown": "#A86223",
       "red": "#D81159",
       "gunmetal": "#232C33",
+      "gunmetal-accent": "#232C33B3",
       "white": "#fff",
       "black": "#000"
     },
