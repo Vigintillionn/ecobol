@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
-    <nav className="h-16 w-full flex items-center relative py-2 px-0 bg-white text-black shadow-sm md:max-lg:pl-16 lg:max-xl:pl-48 xl:pl-64">
+    <nav className="z-[100] h-16 w-full flex items-center relative py-2 px-0 bg-white text-black shadow-md md:max-lg:pl-16 lg:max-xl:pl-48 xl:pl-64">
       <Link to="/" className="no-underline text-black text-xl ml-4 flex p-0 relative">
         <img src="/Images/logo.png" className="w-10 h-auto m-0 absolute top-2/4 -translate-y-2/4" alt="logo" />
         <p className="ml-12 font-mavenpro font-semibold">EcoBol</p>
@@ -35,11 +35,11 @@ export default function Navbar() {
       <div className={(isNavExpanded ? "expanded" : "md:max-lg:pr-16 lg:max-xl:pr-48 xl:pr-64") + " ml-auto font-mavenpro font-semibold"}>
         <ul className="max-md:hidden max-md:absolute max-md:top-14 max-md:left-0 max-md:flex-col max-md:w-full max-md:hamburger-height max-md:border-y
             md:flex md:p-0 ">
-          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link to="/" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Home</Link></li>
-          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link to="/over" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Over</Link></li>
-          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link to="/contact" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Contact</Link></li>
-          <li className="list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link to="/info" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Info</Link></li>
-          <li className="list-none mx-4 md:bg-green md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent transition-opacity"><Link to="/shop" className="no-underline uppercase block w-full md:py-2 md:px-5 max-md:text-black max-md:py-6"><FontAwesomeIcon className="max-md:hidden" icon={faShoppingCart} /> Shop</Link></li>
+          <li className="bg-white list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green"><Link onClick={() => setIsNavExpanded(false)} to="/" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Home</Link></li>
+          <li className="bg-white  list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green"><Link onClick={() => setIsNavExpanded(false)} to="/over" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Over</Link></li>
+          <li className="bg-white  list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green"><Link onClick={() => setIsNavExpanded(false)} to="/contact" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Contact</Link></li>
+          <li className="bg-white  list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green"><Link onClick={() => setIsNavExpanded(false)} to="/info" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Info</Link></li>
+          <li className="list-none mx-4 max-md:bg-white  md:bg-green md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green transition-opacity"><Link onClick={() => setIsNavExpanded(false)} to="/shop" className="no-underline uppercase block w-full md:py-2 md:px-5 max-md:text-black max-md:py-6"><FontAwesomeIcon className="max-md:hidden" icon={faShoppingCart} /> Shop</Link></li>
         </ul>
       </div>
     </nav>
