@@ -18,7 +18,7 @@ export default function Shop() {
       <ul className="box-border grid p-0 grid-cols-cards gap-8 my-8 mb-16 list-none overflow-hidden mx-12">
         <li className="relative">
           <Ribbon text={stockWijnflessen ? "20% Korting!" : "Uitverkocht!"} />
-          <a href="/" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWijnflessen > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
+          <a href="/bestel?type=wijnfles" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWijnflessen > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
             <img src="/Images/wijnfles.png" alt="i" className="w-full h-auto" />
             <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
               <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
@@ -35,7 +35,7 @@ export default function Shop() {
         </li>
         <li className="relative">
           { stockWeckpotten <= 0 && <Ribbon text="Uitverkocht!"/> }
-          <a href="/" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWeckpotten > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
+          <a href="/bestel?type=weckpot" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWeckpotten > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
             <img src="/Images/weckpot.png" alt="i" className="w-full h-auto" />
             <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
               <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
