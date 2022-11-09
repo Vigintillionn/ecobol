@@ -1,19 +1,12 @@
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import NumericInput from "../components/NumericInput";
 
 export default function Bestel() {
   const [searchParams] = useSearchParams();
   const [amount, setAmount] = useState("1");
-  const [mobile, setMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setMobile(window.innerWidth < 768);
-    });
-  });
 
   let bottleType = searchParams.get("type");
 
@@ -25,12 +18,12 @@ export default function Bestel() {
           <div>
             <div className="">  
               Aantal:
-              <NumericInput min={1} max={10} val={amount} onValChange={setAmount} />
+              <NumericInput className="ml-2" min={1} max={10} val={amount} onValChange={setAmount} />
             </div>
           </div>
           <div className="absolute bottom-[10%] left-1/4 md:left-[12.8%]">
             <button type="submit" form="amount" className="bg-blue transition delay-300 ease-linear rounded-md relative overflow-hidden pointer outline-none border-none text-white p-0 m-0 group hover:bg-blue-darker">
-              <span className="font-nunito transition-transform delay-300 inline-block px-3 py-5 m-0 text-lg bg-gunmetal border-0 -translate-x-[10%] pr-4 group-hover:-translate-x-[110%]">€250</span>
+              <span className="font-nunito transition-transform delay-300 inline-block px-3 py-5 m-0 text-lg bg-gunmetal border-0 -translate-x-[10%] pr-4 group-hover:-translate-x-[110%]">€{(parseInt(amount)*12)},-</span>
               <span className="font-nunito transition-transform delay-300 inline-block px-3 py-5 m-0 text-lg bg-gunmetal border-0 -translate-x-full absolute z-1 left-0 top-0 group-hover:translate-x-0"><FontAwesomeIcon icon={faShoppingCart} /></span>
               <span className="font-nunito transition-transform delay-300 inline-block px-3 py-5 m-0 text-lg z-10 font-semibold">Bestel Nu</span>
             </button>
@@ -50,10 +43,4 @@ export default function Bestel() {
       </div>
     </div>
   )
-}
-
-function handleSubmit(event: any) {
-  let e = JSON.stringify(event)
-  console.log(e)  
-  event.preventDefault()
 }

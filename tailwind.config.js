@@ -18,7 +18,8 @@ module.exports = {
       "gunmetal": "#232C33",
       "gunmetal-accent": "#232C33B3",
       "white": "#fff",
-      "black": "#000"
+      "black": "#000",
+      "transparent": "transparent",
     },
     extend: {
       gridTemplateColumns: {
@@ -26,6 +27,12 @@ module.exports = {
       },
       borderRadius: {
         "cards": "2.5rem"
+      },
+      boxShadow: {
+        "nibutton-inactive": "-1px -1px 3px rgba(0,0,0,.1) inset," + 
+        "1px 1px 3px rgba(255,255,255,.7) inset",
+        "nibutton-active": "0 1px 3px rgba(0,0,0,.2) inset," +
+        "-1px -1px 4px rgba(255,255,255,.5) inset"
       }
     }
   },
