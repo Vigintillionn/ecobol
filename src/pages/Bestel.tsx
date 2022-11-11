@@ -11,7 +11,7 @@ export default function Bestel() {
   let bottleType = searchParams.get("type");
 
   return (
-    <div className="relative">
+    <div className="relative my-auto mx-0">
       <div className="shadow bg-green text-center rounded-md overflow-hidden my-8 h-[36rem] w-[20rem] absolute left-2/4 top-2/4 -translate-x-2/4 md:w-[48rem]">
         <div className="relative text-center overflow-hidden p-7 h-full w-full float-left md:w-5/12 md:text-left">
           <h1 className="font-mavenpro inline-block relative text-3xl m-0 text-gunmetal uppercase">{bottleType}</h1>

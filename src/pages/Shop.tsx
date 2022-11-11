@@ -10,7 +10,7 @@ export default function Shop() {
   
   // TODO Make responsive
   return (
-    <div>
+    <div className="mx-0 inline-block">
       <div className="w-full text-center m-0 p-0">
         <h1 className="pt-8 text-3xl font-mavenpro font-semibold tex">Shop</h1>
         <p className="font-nunito text-lg">Bestel hier een van onze prachtige en klimaatvriendelijke ecobollen!</p>
@@ -67,7 +67,9 @@ export default function Shop() {
           </a>  
         </li>
       </ul>
-      <h1 className="absolute left-2/4 -translate-x-2/4 text-center overflow-x-hidden pb-48"><strong>Belangrijk!</strong> Aangezien wij een mini-onderneming van <a className="text-blue underline hover:opacity-60 transition-opacity delay-50" href="https://www.vlajo.org/" target="_blank" rel="noreferrer">VLAJO</a> zijn, kan de btw van ons product niet worden teruggetrokken. Indien u hier verdere vragen over hebt, gelieve ons te contacteren.</h1>
+      <div className="mx-24 mb-8 md:mx-72">
+        <p className="text-center"><strong>Belangrijk!</strong> Aangezien wij een mini-onderneming van <a className="text-blue underline hover:opacity-60 transition-opacity delay-50" href="https://www.vlajo.org/" target="_blank" rel="noreferrer">VLAJO</a> zijn, kan de btw van ons product niet worden teruggetrokken. Indien u hier verdere vragen over hebt, gelieve ons te contacteren.</p>
+      </div>
     </div>
   )
 }

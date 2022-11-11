@@ -26,6 +26,11 @@
       "src": "workshops.png",
       "sizes": "500x500",
       "type": "image/png"
+    },
+    {
+      "src": "vlajobutton.jpg",
+      "sizes": "1600x1132",
+      "type": "image/jpg"
     }
   ],
   "start_url": ".",

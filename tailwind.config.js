@@ -25,6 +25,9 @@ module.exports = {
       gridTemplateColumns: {
         "cards": "repeat(auto-fit, minmax(300px, 1fr))"
       },
+      gridTemplateRows: {
+        "body": "auto 1fr auto"
+      },
       borderRadius: {
         "cards": "2.5rem"
       },

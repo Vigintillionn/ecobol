@@ -12,7 +12,7 @@
   src: url("../public/Fonts/MavenPro-VariableFont_wght.ttf");
 }
 
-.height-without-nav {
+.height-home {
   height: calc(100vh - 4rem);
 }
 
