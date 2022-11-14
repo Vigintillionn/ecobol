@@ -36,6 +36,10 @@ module.exports = {
         "1px 1px 3px rgba(255,255,255,.7) inset",
         "nibutton-active": "0 1px 3px rgba(0,0,0,.2) inset," +
         "-1px -1px 4px rgba(255,255,255,.5) inset"
+      },
+      flex: {
+        homeImage: "0 0 30%",
+        homeText: "0 0 70%"
       }
     }
   },
