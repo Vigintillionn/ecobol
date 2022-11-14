@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="text-black bg-green pt-12 relative bottom-0 w-full shadow-md inline-block">
+    <footer className="text-black bg-green pt-12 relative bottom-0 w-full inline-block">
       <div className="">
         <div className="flex flex-wrap mx-24 md:mx-32">
           <div className="flex-grow w-full text-center mb-4 sm:text-left sm:w-2/5 md:w-5/12 h-auto ">
             <h4 className="text-lg font-semibold font-mavenpro">Contact</h4>
-            <ul className="text-black opacity-80 font-nunito">
-              <li><FontAwesomeIcon className="mr-3 ml-2" icon={faHouse}/>Vlieghavenlaan 18, Keerbergen 3140</li>
-              <li><FontAwesomeIcon className="mr-3 ml-2" icon={faPhone}/>+32 478537554</li>
-              <li><FontAwesomeIcon className="mr-3 ml-2" icon={faEnvelope}/>info@ecobol.be</li>
+            <ul className="text-black font-nunito">
+              <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faHouse}/>Vlieghavenlaan 18, Keerbergen 3140</li>
+              <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faPhone}/>+32 478537554</li>
+              <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faEnvelope}/>info@ecobol.be</li>
               <li>
-              <h4 className="opacity-100 text-lg font-semibold font-mavenpro">Volg ons!</h4>
+              <h4 className="text-lg font-semibold font-mavenpro">Volg ons!</h4>
                 <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
                 <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faInstagram}/></a>
                 <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
