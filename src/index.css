@@ -12,8 +12,8 @@
   src: url("../public/Fonts/MavenPro-VariableFont_wght.ttf");
 }
 
-.height-home {
-  height: calc(100vh - 4rem);
+.min-h-full-nonav {
+  min-height: calc(100vh - 4rem);
 }
 
 .card_desc {

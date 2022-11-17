@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   return (
     <div className="my-auto mx-0">
-      <div className="height-home w-full bg-gradient-to-t from-green to-[#deffb6] relative">
+      <div className="min-h-full-nonav w-full bg-gradient-to-t from-green to-[#deffb6] relative">
         
         <div className="flex flex-col h-full py-24 mx-[20%] lg:mx-[30%] md:py-32 md:flex-row">
           <div className="flex-homeText w-full">
