@@ -12,7 +12,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold font-mavenpro">Contact</h4>
             <ul className="text-black font-nunito">
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faHouse}/>Vlieghavenlaan 18, Keerbergen 3140</li>
-              <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faPhone}/>+32 478537554</li>
+              <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faPhone}/>+32 489 74 81 73</li>
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faEnvelope}/>info@ecobol.be</li>
               <li>
               <h4 className="text-lg font-semibold font-mavenpro">Volg ons!</h4>
