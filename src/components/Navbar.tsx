@@ -37,8 +37,8 @@ export default function Navbar() {
             md:flex md:p-0 ">
           <li className="bg-white list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link onClick={() => setIsNavExpanded(false)} to="/" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Home</Link></li>
           <li className="bg-white  list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link onClick={() => setIsNavExpanded(false)} to="/over" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Over</Link></li>
+          <li className="bg-white  list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link onClick={() => setIsNavExpanded(false)} to="/info" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Info</Link></li> 
           <li className="bg-white  list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link onClick={() => setIsNavExpanded(false)} to="/contact" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Contact</Link></li>
-          <li className="bg-white  list-none mx-4 md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent"><Link onClick={() => setIsNavExpanded(false)} to="/info" className="no-underline uppercase block w-full md:p-2 max-md:text-black max-md:py-6">Info</Link></li>
           <li className="list-none mx-4 max-md:bg-white  md:bg-green md:rounded-3xl max-md:text-center max-md:m-0 hover:bg-green-accent transition-opacity"><Link onClick={() => setIsNavExpanded(false)} to="/shop" className="no-underline uppercase block w-full md:py-2 md:px-5 max-md:text-black max-md:py-6"><FontAwesomeIcon className="max-md:hidden" icon={faShoppingCart} /> Shop</Link></li>
         </ul>
       </div>
