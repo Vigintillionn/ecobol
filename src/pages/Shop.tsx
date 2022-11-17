@@ -19,7 +19,7 @@ export default function Shop() {
         <li className="relative">
           <Ribbon text={stockWijnflessen ? "20% Korting!" : "Uitverkocht!"} />
           <a href="/bestel?type=wijnfles" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWijnflessen > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
-            <img src="/Images/wijnfles.png" alt="i" className="w-full h-auto" />
+            <img src="/Images/wijnfles.jpg" alt="i" className="w-full object-cover aspect-square" />
             <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
               <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
                 <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
@@ -36,7 +36,7 @@ export default function Shop() {
         <li className="relative">
           { stockWeckpotten <= 0 && <Ribbon text="Uitverkocht!"/> }
           <a href="/bestel?type=weckpot" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWeckpotten > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
-            <img src="/Images/weckpot.png" alt="i" className="w-full h-auto" />
+            <img src="/Images/weckpot.jpg" alt="i" className="w-full object-cover aspect-square" />
             <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
               <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
                 <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
@@ -52,14 +52,14 @@ export default function Shop() {
         </li>
         <li>
           <a href="/" className="relative block h-full overflow-hidden no-underline rounded-cards group pointer-events-none cursor-default opacity-50">
-            <img src="/Images/workshops.png" alt="i" className="w-full h-auto" />
+            <img src="/Images/workshops.png" alt="i" className="w-full h-auto object-cover" />
             <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
               <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
                 <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
                 <div className="shrink-0 w-12 h-12 rounded-full bg-white text-center leading-[3.25rem]"><FontAwesomeIcon className="text-3xl" icon={faBriefcase} /></div>
                 <div>
                   <h3 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Workshop</h3>
-                  <span className="text-gunmetal text-lg font-nunito font-semibold">€20 voor 1u30</span>
+                  <span className="text-gunmetal text-lg font-nunito font-semibold">€20 per persoon</span>
                 </div>
               </div>
               <p className="pt-0 px-8 pb-8 m-0 text-black font-nunito overflow-hidden card_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
