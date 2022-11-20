@@ -15,7 +15,7 @@ export default function Footer() {
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faPhone}/>+32 489 74 81 73</li>
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faEnvelope}/>info@ecobol.be</li>
               <li>
-              <h4 className="text-lg font-semibold font-mavenpro">Volg ons!</h4>
+                <h4 className="text-lg font-semibold font-mavenpro">Volg ons!</h4>
                 <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
                 <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faInstagram}/></a>
                 <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
