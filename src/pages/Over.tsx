@@ -3,7 +3,7 @@ import React from "react";
 export default function Over() {
   return (
     <div className="min-h-full-nonav mx-0">
-      <div className="h-48 md:h-96 bg-green z-[-1]">
+      <div className="h-48 md:h-96 bg-green shadow-2xl z-[-1]">
         <h1 className="text-center font-mavenpro text-[2.5rem] text-black font-bold pt-10">Over Ons</h1>
       </div>
       <div className="relative">
