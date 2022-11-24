@@ -19,13 +19,13 @@ export default function Contact() {
     let subject = (form.current[2] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
     let message = (form.current[3] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
 
-    let err = "";
-    setError(err);
-    if (!senderMail || !senderMail.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) err += "Vul alstublieft een correct e-mail adres in.";
-    if (message.split(" ").length < 10) err += "Geef wat meer info alstublieft.";
+    let err: string[] = [];
+    setError("");
+    if (!senderMail || !senderMail.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) err.push("Vul alstublieft een correct e-mail adres in.");
+    if (message.split(" ").length < 10) err.push("Geef wat meer info alstublieft.");
 
     if (err.length > 0) {
-      setError(err);
+      setError(err.join(" "));
       return;
     }
 
