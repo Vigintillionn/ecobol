@@ -1,11 +1,49 @@
-import React from "react";
-import { faEnvelope, faUser, faPencil, faPaperPlane, faHouse, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "@emailjs/browser";
 import { faFacebook, faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faHouse, faPaperPlane, faPencil, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useRef, useState } from "react";
 
+const PUBLIC_KEY = "VydYsQWvyQEaGrLIJ";
+const SERVICE_ID = "service_5pg4oe3";
+const TEMPLATE_ID = "template_e06uvyl";
 
 export default function Contact() {
-  function handleOnSubmit() {}
+  const form = useRef(null) as React.MutableRefObject<HTMLFormElement>;
+  const [error, setError] = useState("");
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    let senderMail = (form.current[0] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
+    let senderName = (form.current[1] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
+    let subject = (form.current[2] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
+    let message = (form.current[3] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
+
+    let err = "";
+    setError(err);
+    if (!senderMail || !senderMail.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) err += "Vul alstublieft een correct e-mail adres in.";
+    if (message.split(" ").length < 10) err += "Geef wat meer info alstublieft.";
+
+    if (err.length > 0) {
+      setError(err);
+      return;
+    }
+
+    const params = {
+      from_name: senderName,
+      from_email: senderMail,
+      from_subject: subject,
+      from_message: message,
+    }
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, params, PUBLIC_KEY)
+      .then((res) => {
+        console.log(res.text);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }
 
   return (
     <div className="min-h-full-nonav">
@@ -28,8 +66,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="w-full flex justify-center items-center mx-auto md:w-[40%]">
-          <form>
-
+          <form ref={form} onSubmit={sendEmail}>
             <div className="text-center relative">
               <label htmlFor="email" className="block font-mavenpro text-lg">Email<span className="text-red">*</span></label>
               <input className="block border w-full rounded-sm pl-8 peer transition-all delay-50 ease-in-out focus:pl-2 focus:pr-6"
@@ -67,11 +104,11 @@ export default function Contact() {
                 rows={5}
               />
             </div>
+            {error.length > 0 && <span className="text-red">{error}</span>}
             <button type="submit" className="bg-blue shadow-lg font-nunito block py-2 px-4 mx-auto my-4 rounded-2xl hover:opacity-80">
               <i className="mr-3"><FontAwesomeIcon icon={faPaperPlane} /></i>
               Submit
             </button>
-
           </form>
         </div>
       </div>
