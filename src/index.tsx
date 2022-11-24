@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.css';
 
 import Bestel from './pages/Bestel';
+import Betaal from './pages/Betaal';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Info from './pages/Info';
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="info" element={<Info />}></Route>
           <Route path="shop" element={<Shop />}></Route>
           <Route path="bestel" element={<Bestel />}></Route>
+          <Route path="betaal" element={<Betaal />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
