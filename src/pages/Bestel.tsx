@@ -6,14 +6,10 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 import NumericInput from "../components/NumericInput";
 
-const PUBLIC_KEY = "VydYsQWvyQEaGrLIJ";
-const SERVICE_ID = "service_5pg4oe3";
-const TEMPLATE_ID_ORDER = "template_5d8ydcy";
-
-// TODO: Change to ecobol emailjs
-const P_KEY = "g9rIdgXMYLKten8iD";
-const S_ID = "service_zz8m5br";
-const TEMPLATE_ID_CONFIRMATION = "template_whgpq6h";
+const PUBLIC_KEY = "IOMMNfJmmwxmjnagL";
+const SERVICE_ID = "service_p6on5ek";
+const TEMPLATE_ID_ORDER = "template_1ztz5g1";
+const TEMPLATE_ID_CONFIRMATION = "template_snv2omo";
 
 export default function Bestel() {
   const [searchParams] = useSearchParams();
@@ -76,7 +72,7 @@ export default function Bestel() {
       console.log(err.message);
     });
 
-    emailjs.send(S_ID, TEMPLATE_ID_CONFIRMATION, params, P_KEY)
+    emailjs.send(SERVICE_ID, TEMPLATE_ID_CONFIRMATION, params, PUBLIC_KEY)
     .then((res) => {
       console.log(res.text);
     })
