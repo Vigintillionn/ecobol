@@ -11,6 +11,7 @@ const TEMPLATE_ID = "template_e06uvyl";
 export default function Contact() {
   const form = useRef(null) as React.MutableRefObject<HTMLFormElement>;
   const [error, setError] = useState("");
+  const [messageSucces, setMessageSuccess] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,6 +40,7 @@ export default function Contact() {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, params, PUBLIC_KEY)
       .then((res) => {
         console.log(res.text);
+        setMessageSuccess(true);
       })
       .catch((err) => {
         console.log(err.message);
@@ -105,6 +107,7 @@ export default function Contact() {
               />
             </div>
             {error.length > 0 && <span className="text-red">{error}</span>}
+            {messageSucces && <span className="text-gunmetal">Uw bericht is succesvol verzonden.</span>}
             <button type="submit" className="bg-blue shadow-lg font-nunito block py-2 px-4 mx-auto my-4 rounded-2xl hover:opacity-80">
               <i className="mr-3"><FontAwesomeIcon icon={faPaperPlane} /></i>
               Submit
