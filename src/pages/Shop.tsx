@@ -7,6 +7,8 @@ import Ribbon from "../components/Ribbon";
 export default function Shop() {
   const [stockWijnflessen, setStockWijnflessen] = useState(1);
   const [stockWeckpotten, setStockWeckpotten] = useState(1);
+
+  if (setStockWijnflessen && setStockWeckpotten) console.log(1);
   
   // TODO Make responsive
   return (
