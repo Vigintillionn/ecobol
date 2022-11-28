@@ -40,6 +40,9 @@ module.exports = {
       flex: {
         homeImage: "0 0 30%",
         homeText: "0 0 70%"
+      },
+      backgroundImage: {
+        "blob": "url('/public/Images/blob.svg')"
       }
     }
   },

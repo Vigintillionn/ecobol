@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Info from './pages/Info';
 import Layout from './pages/Layout';
+import NotFound from './pages/NotFound';
 import Over from './pages/Over';
 import Shop from './pages/Shop';
 
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="shop" element={<Shop />}></Route>
           <Route path="bestel" element={<Bestel />}></Route>
           <Route path="betaal" element={<Betaal />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
