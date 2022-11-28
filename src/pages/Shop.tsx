@@ -8,11 +8,11 @@ export default function Shop() {
   const [stockWijnflessen, setStockWijnflessen] = useState(1);
   const [stockWeckpotten, setStockWeckpotten] = useState(1);
 
-  if (setStockWijnflessen && setStockWeckpotten) console.log(1);
+  if (setStockWijnflessen && setStockWeckpotten) console.log(1); // TODO: Clean this up
   
-  // TODO Make responsive
+  // TODO: Make better responsive
   return (
-    <div className="mx-0 inline-block">
+    <div className="min-h-full-nonav pb-8 mx-0 inline-block">
       <div className="w-full text-center m-0 p-0">
         <h1 className="pt-8 text-3xl font-mavenpro font-semibold tex">Shop</h1>
         <p className="font-nunito text-lg">Bestel hier een van onze prachtige en klimaatvriendelijke ecobollen!</p>
