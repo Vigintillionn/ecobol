@@ -70,7 +70,7 @@ export default function Shop() {
         </li>
       </ul>
       <div className="mx-24 mb-8 md:mx-72">
-        <p className="text-center"><strong>Belangrijk!</strong> Aangezien wij een mini-onderneming van <a className="text-blue underline hover:opacity-60 transition-opacity delay-50" href="https://www.vlajo.org/" target="_blank" rel="noreferrer">VLAJO</a> zijn, kan de btw van ons product niet worden teruggetrokken. Indien u hier verdere vragen over hebt, gelieve ons te contacteren.</p>
+        <p className="text-center"><strong>Belangrijk!</strong> Aangezien wij een mini-onderneming van <a className="text-blue underline hover:opacity-60 transition-opacity delay-75" href="https://www.vlajo.org/" target="_blank" rel="noreferrer">VLAJO</a> zijn, kan de btw van ons product niet worden teruggetrokken. Indien u hier verdere vragen over hebt, gelieve ons te contacteren.</p>
       </div>
     </div>
   )

@@ -71,7 +71,7 @@ export default function Contact() {
           <form ref={form} onSubmit={sendEmail}>
             <div className="text-center relative">
               <label htmlFor="email" className="block font-mavenpro text-lg">Email<span className="text-red">*</span></label>
-              <input className="block border w-full rounded-sm pl-8 peer transition-all delay-50 ease-in-out focus:pl-2 focus:pr-6"
+              <input className="block border w-full rounded-sm pl-8 peer transition-all delay-75 ease-in-out focus:pl-2 focus:pr-6"
                 type="email"
                 name="email"
                 id="email"
@@ -81,7 +81,7 @@ export default function Contact() {
             </div>
             <div className="text-center relative">
               <label htmlFor="name" className="block font-mavenpro text-lg">Naam<span className="text-red">*</span></label>
-              <input className="block border w-full rounded-sm pl-8 peer transition-all delay-50 ease-in-out focus:pl-2 focus:pr-6"
+              <input className="block border w-full rounded-sm pl-8 peer transition-all delay-75 ease-in-out focus:pl-2 focus:pr-6"
                 type="name"
                 name="name"
                 id="name"
@@ -91,7 +91,7 @@ export default function Contact() {
             </div>
             <div className="text-center relative">
               <label htmlFor="subject" className="block font-mavenpro text-lg">Onderwerp<span className="text-red">*</span></label>
-              <input className="block border w-full rounded-sm pl-8 peer transition-all delay-50 ease-in-out focus:pl-2 focus:pr-6"
+              <input className="block border w-full rounded-sm pl-8 peer transition-all delay-75 ease-in-out focus:pl-2 focus:pr-6"
                 type="text"
                 name="subject"
                 id="subject"
