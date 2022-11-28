@@ -17,7 +17,7 @@ export default function Footer() {
               <li>
                 <h4 className="text-lg font-semibold font-mavenpro">Volg ons!</h4>
                 <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
-                <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faInstagram}/></a>
+                <a className="mx-2 hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
                 <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
               </li>
             </ul>

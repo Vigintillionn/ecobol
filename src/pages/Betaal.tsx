@@ -26,7 +26,7 @@ export default function Betaal() {
           </p>
           <div className="text-center mt-8"> 
             <a className="mr-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
-            <a className="mx-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faInstagram}/></a>
+            <a className="mx-2 text-gunmetal hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
             <a className="ml-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
           </div>
         </div>

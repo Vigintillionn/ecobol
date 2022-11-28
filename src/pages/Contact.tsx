@@ -63,7 +63,7 @@ export default function Contact() {
           <div className="lg:absolute lg:bottom-0">
             <h4 className="text-lg font-mavenpro font-semibold">Sociale Media</h4>
             <a className="mr-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
-            <a className="mx-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faInstagram}/></a>
+            <a className="mx-2 text-gunmetal hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
             <a className="mx-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
           </div>
         </div>
