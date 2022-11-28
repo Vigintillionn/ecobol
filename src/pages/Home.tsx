@@ -30,7 +30,7 @@ export default function Home() {
               repeat={Infinity}
               style={{ fontWeight: "bolder", fontSize: "1.875rem", fontFamily: "MavenPro, cursive", marginBottom: "2rem" }}
             />
-            <span className="font-nunito block text-lg text-gunmetal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cupiditate cum dicta adipisci veritatis ipsa aspernatur ipsum amet, vero ratione doloribus nam est ducimus, expedita itaque et voluptatibus similique quasi.</span>
+            <span className="font-nunito block text-lg text-gunmetal">De EcoBol is een gebotteld ecosysteem. Dit zijn plantjes in een gerecycleerde fles, die zichzelf onderhoudt door middel van een natuurfenomeen, fotosynthese. Hierdoor is er dus geen onderhoud nodig aan de plant.</span>
             <hr className="w-24 mt-8" />
             <div className="mt-8 space-x-4">
               <Link to="/shop" className="border text-gunmetal inline-block p-2 w-16 text-center uppercase hover:opacity-80 hover:border-[#00000099] transition-all ease-in-out delay-50">Shop</Link>

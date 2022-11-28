@@ -53,7 +53,7 @@ export default function Contact() {
         <div className="flex flex-col w-full relative md:w-[60%] md:mr-10">
           <h1 className="font-mavenpro text-4xl font-semibold mb-4">Contacteer Ons</h1>
           <hr className="w-[20%]" />
-          <span className="my-4 font-nunito text-gunmetal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis impedit soluta beatae perferendis et nisi nostrum deserunt obcaecati voluptate repudiandae!</span>
+          <span className="my-4 font-nunito text-gunmetal">Hebt u enige vragen of ervaart u problemen met onze EcoBol? Aarzel dan niet ons te contacteren via mail of door dit contactformulier in te vullen.</span>
           <hr className="w-[20%]" />
           <ul className="mt-4">
             <li><FontAwesomeIcon className="mr-3 text-gunmetal" icon={faHouse}/>Vlieghavenlaan 18, Keerbergen 3140</li>
@@ -95,7 +95,7 @@ export default function Contact() {
                 type="text"
                 name="subject"
                 id="subject"
-                placeholder="Subject" 
+                placeholder="Onderwerp" 
               />
               <i className="absolute text-gunmetal left-2 top-7 block transition-all delay-100 ease-in-out peer-focus:hidden"><FontAwesomeIcon icon={faPencil} /></i>
             </div>
