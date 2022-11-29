@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import NumericInput from "../components/NumericInput";
 
 const PUBLIC_KEY = "IOMMNfJmmwxmjnagL";
-const SERVICE_ID = "service_p6on5ek";
+const SERVICE_ID = "service_10ctl0q"; // service_p6on5ek
 const TEMPLATE_ID_ORDER = "template_1ztz5g1";
 const TEMPLATE_ID_CONFIRMATION = "template_snv2omo";
 
