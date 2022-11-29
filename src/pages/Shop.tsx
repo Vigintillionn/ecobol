@@ -1,7 +1,7 @@
 import { faBriefcase, faJar, faWineBottle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
 import Ribbon from "../components/Ribbon";
+// import { useState } from "react";
 
 
 export default function Shop() {
