@@ -6,10 +6,16 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 import NumericInput from "../components/NumericInput";
 
-const PUBLIC_KEY = "IOMMNfJmmwxmjnagL";
-const SERVICE_ID = "service_10ctl0q"; // service_p6on5ek
-const TEMPLATE_ID_ORDER = "template_1ztz5g1";
-const TEMPLATE_ID_CONFIRMATION = "template_snv2omo";
+// API Settings for Confirmation
+const PUBLIC_KEY_ECOBOL = "IOMMNfJmmwxmjnagL"; // EcoBol
+const SERVICE_ID_ECOBOL = "service_10ctl0q";  // service_p6on5ek
+const TEMPLATE_ID_CONFIRMATION = "template_1ztz5g1";
+// const TEMPLATE_ID_CONFIRMATION_DELIVERY = "template_snv2omo";
+
+// API-Settings for Order
+const PUBLIC_KEY_YARNE = "VydYsQWvyQEaGrLIJ"; // P Key Yarne
+const SERVICE_ID_YARNE = "service_5pg4oe3"; // Service ID Yarne
+const TEMPLATE_ID_ORDER = "template_5d8ydcy"; // Template Order
 
 export default function Bestel() {
   const [searchParams] = useSearchParams();
@@ -28,6 +34,7 @@ export default function Bestel() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if(e.nativeEvent.submitter.id !== "orderbutton") return;
+    setError("");
 
     let firstName = (form.current[3] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
     let lastName = (form.current[4] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
@@ -35,7 +42,18 @@ export default function Bestel() {
     let address = (form.current[6] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
     let pCode = (form.current[7] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
     let city = (form.current[8] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
-    let comments = (form.current[9] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
+    let takeaway;
+    let paymentMethod;
+    let comments;
+    if (pCode !== "2580" && pCode !== "3140") {
+      takeaway = (form.current[9] as React.SelectHTMLAttributes<HTMLFormElement>).value.toString();
+      paymentMethod = (form.current[10] as React.SelectHTMLAttributes<HTMLFormElement>).value.toString();
+      comments = (form.current[11] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
+    } else {
+      takeaway = "delivery";
+      paymentMethod = (form.current[9] as React.SelectHTMLAttributes<HTMLFormElement>).value.toString();
+      comments = (form.current[10] as React.InputHTMLAttributes<HTMLFormElement>).value.toString();
+    }
 
     // TODO: Check for valid
     let err: string[] = [];
@@ -64,16 +82,41 @@ export default function Bestel() {
       price
     }
 
-    emailjs.send(SERVICE_ID, TEMPLATE_ID_ORDER, params, PUBLIC_KEY)
-    .then((res) => {
+    emailjs.send(
+      SERVICE_ID_YARNE, 
+      TEMPLATE_ID_ORDER, 
+      {
+        ...params,
+        delivery: takeaway === "delivery" ? "Ja" : `Nee, afhaalpunt: Pachtersvelden 3, 2580 Putte`,
+        paymentMethod: paymentMethod === "online" ? "Bankoverschrijving" : "Cash"
+      }, 
+      PUBLIC_KEY_YARNE
+    ).then((res) => {
       console.log(res.text);
     })
     .catch((err) => {
       console.log(err.message);
     });
 
-    emailjs.send(SERVICE_ID, TEMPLATE_ID_CONFIRMATION, params, PUBLIC_KEY)
-    .then((res) => {
+    emailjs.send(
+      SERVICE_ID_ECOBOL, 
+      TEMPLATE_ID_CONFIRMATION, 
+      {
+        ...params,
+        payMessage: paymentMethod === "online" ? "over te schrijven naar de rekening " : "te betalen bij levering of ophaling van uw EcoBol.",
+        billingAddress: paymentMethod === "online" ? "BE03 0019 4010 5484" : "",
+        messageDelivery: paymentMethod === "online" ? "met de mededeling: " : "",
+        paymentMessage: paymentMethod === "online" ? `Betaling Ecobol: ${email}` : "",
+        deliveryTakeaway: takeaway === "delivery" 
+          ? `${paymentMethod === "online" ? "Na bevestiging van betaling zal u nog een mail ontvangen en zal uw bestelling klaar gemaakt worden en" : "Eens wij aan uw bestelling beginnen ontvangt u nog een mail en zal uw EcoBol"} binnen 7 dagen geleverd worden op het adres`
+          : `${paymentMethod === "online" ? "Na bevestiging van betaling zal u nog een mail ontvangen en zal uw bestelling klaar gemaakt worden" : "Eens wij aan uw bestelling beginnen ontvangt u nog een mail"} en kan u binnen 7 dagen uw EcoBol komen afhalen op uw gekozen afhaalpunt`,
+        messageAddress: takeaway === "delivery" ? `${address}, ${pCode} ${city}` : "Pachtersvelden 3, 2580 Putte",
+        readyMessage: takeaway === "delivery" 
+          ? `, u ontvangt nog een mail wanneer wanneer de bezorger met uw EcoBol onderweg is.${paymentMethod === "online" ? "" : " Belangrijk! Indien u niet aanwezig bent bij levering om te betalen nemen wij het pakket terug mee en moet u op een van onze afhaalpunten uw EcoBol komen ophalen, dit wordt afgesproken via mail"}`
+          : ""
+      }, 
+      PUBLIC_KEY_ECOBOL
+    ).then((res) => {
       console.log(res.text);
     })
     .catch((err) => {
@@ -84,8 +127,8 @@ export default function Bestel() {
   }
 
   return (
-    <div className="relative mb-[50rem] mx-0 md:mb-[44rem]">
-      <div className="shadow bg-green text-center rounded-md overflow-hidden my-8 h-[45rem] w-[20rem] absolute left-2/4 top-2/4 -translate-x-2/4 md:h-[40rem] md:w-[48rem]">
+    <div className="relative mb-[64rem] mx-0 md:mb-[55rem]">
+      <div className="shadow bg-green text-center rounded-md overflow-hidden my-8 h-[60rem] w-[20rem] absolute left-2/4 top-2/4 -translate-x-2/4 md:h-[50rem] md:w-[48rem]">
         <form ref={form} onSubmit={handleSubmit} id="order" className="relative text-center overflow-hidden p-7 h-full w-full float-left md:w-[55%] md:text-left">
           <h1 className="font-mavenpro inline-block relative text-3xl m-0 text-gunmetal uppercase">{bottleType}</h1>
           <div>
@@ -103,11 +146,23 @@ export default function Bestel() {
               <input type="text" placeholder="Stad" className="ml-2 mr-2 my-1 p-2 rounded-sm md:row-start-5 md:row-end-5 md:col-start-2 md:col-end-5 md:ml-0" />
             </div>
             { error.length > 0 &&
-              <span className="text-red block font-nunito">Gelieve en correct e-mail adres in te geven. Gelieve alle velden in te vullen. </span>
+              <span className="text-red block font-nunito">{error}</span>
             }
-            { (postalCode !== 2580 && postalCode !== 3140) && postalCode?.toString().length === 4 &&
-              <span className="text-red block mt-2 font-nunito">Wij leveren niet buiten Putte of Keerbergen, u zult gebruik moeten maken van een afhaalpunt.</span>
+            { (postalCode !== 2580 && postalCode !== 3140) && postalCode?.toString().length === 4 && (
+              <div>
+                <label htmlFor="takeaway" className="text-gunmetal block mt-2 font-nunito">Wij leveren niet buiten Putte of Keerbergen, selecteer een afhaalpunt.</label>
+                <select className="p-2 rounded-sm w-full mr-2 font-nunito" name="takeaway" id="takeaway">
+                  <option value="putte">Putte</option>
+                  <option value="keerbergen">Keerbergen</option>
+                </select>
+              </div>
+              )
             }
+            <label htmlFor="takeaway" className="text-gunmetal block mt-2 font-nunito">Hoe wenst u te betalen?</label>
+            <select className="p-2 rounded-sm w-full mr-2 font-nunito" name="paymentMethod" id="paymentMethod">
+              <option value="online">Bankoverschrijving</option>
+              <option value="cash">Bij levering</option>
+            </select>
             <div className="w-full text-gunmetal font-nunito text-center">
               <h2 className="text-lg font-mavenpro  uppercase font-bold my-2">Opmerkingen</h2>
               <textarea placeholder="Hebt u enige opmerkingen of dingen die wij moeten weten, laat ze hier acher." className="w-full max-h-20 mr-2 my-1 p-2 rounded-sm"></textarea>
