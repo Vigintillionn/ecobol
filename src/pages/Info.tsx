@@ -6,13 +6,13 @@ export default function Info() {
       <div className="flex flex-col w-full mt-10 lg:mt-20 gap-32">
         <div className="flex flex-row lg:mx-24 gap-16">
           <img src="/Images/vlajobutton.jpg" className="h-40 w-auto ml-16 hidden md:block" alt="" />
-          <div className="mx-20 md:ml-0">
+          <div className="mx-12 md:mx-20 md:ml-0">
             <h1 className="font-mavenpro text-3xl text-black font-semibold mb-4">Wij zijn een <a href="/" className="underline transition-opacity delay-75 ease-in-out hover:opacity-80">VLAJO</a> onderneming</h1>
             <span className="font-nunito text-gunmetal text-lg">Wij zijn een mini-onderneming van KAKeerbergen onder leiding van VLAJO (Vlaamse Jongerenonderneming) en An Warmoes. Vlajo zorgt ervoor dat wij eens kunnen proeven van het ondernemingsleven. VLAJO "speelt" onze overheid, waar wij BTW aan moeten betalen en een boekhouding aan moeten presenteren. Hierdoor zijn wij ook geen officieel bedrijf en kan je als bedrijf de BTW van ons product niet terugtrekken. Daarom stellen wij het zeker op prijs als u ons feedback kan geven of ons project kan steunen, zodat wij de #1 Vlaamse Jongerendonderneming van 2023 kunnen worden!</span>
           </div>
         </div>
         <div className="flex flex-row lg:mx-24 left">
-          <div className="mx-20 mb-10 md:mr-0 lg:ml-16">
+          <div className="mx-12 md:mx-20 mb-10 md:mr-0 lg:ml-16">
             <h1 className="font-mavenpro text-3xl text-black font-semibold mb-4">Belangrijke informatie</h1>
             <p className="font-nunito text-gunmetal text-lg">Oké, als we u hebben wijsgemaakt dat er totaal geen onderhoud nodig is aan de plant hebben we een beetje gelogen. Eigenlijk is er in het begin wel wat onderhoud nodig. Hierbij bedoelen we de eerste 1 à 2 maanden, want eens de plant vertrokken is zal ze in sommige gevallen tot jaren lang overleven.</p>
             <br />
