@@ -5,19 +5,21 @@ import Ribbon from "../components/Ribbon";
 
 
 export default function Shop() {
-  const [stockWijnflessen, setStockWijnflessen] = useState(1);
-  const [stockWeckpotten, setStockWeckpotten] = useState(1);
+  // const [stockWijnflessen, setStockWijnflessen] = useState(0);
+  // const [stockWeckpotten, setStockWeckpotten] = useState(0);
 
-  if (setStockWijnflessen && setStockWeckpotten) console.log(1); // TODO: Clean this up
+  // if (setStockWijnflessen && setStockWeckpotten) console.log(1); // TODO: Clean this up
+  let stockWijnflessen, stockWeckpotten = 0;
   
   // TODO: Make better responsive
   return (
     <div className="min-h-full-nonav pb-8 mx-0 inline-block">
       <div className="w-full text-center m-0 p-0">
+        <p className="pt-8 font-nunito text-lg opacity-80 mx-4 md:mx-24 lg:mx-48 xl:mx-72 2xl:mx-96">Beste klant! Door middel van Examens en meer interesse dan verwacht hebben wij momenteel geen stock meer en zullen wij pas in <span className="font-semibold">December</span> terug beginnen produceren! Wij hopen u dan zeker terug te zien.</p>
         <h1 className="pt-8 text-3xl font-mavenpro font-semibold tex">Shop</h1>
         <p className="font-nunito text-lg">Bestel hier een van onze prachtige en klimaatvriendelijke ecobollen!</p>
       </div>
-      <ul className="box-border grid p-0 grid-cols-cards gap-8 my-8 mb-16 list-none overflow-hidden mx-12">
+      <ul className="box-border grid p-0 grid-cols-cards gap-8 my-8 mb-16 list-none overflow-hidden mx-2 min-[400px]:mx-12">
         <li className="relative">
           <Ribbon text={stockWijnflessen ? "20% Korting!" : "Uitverkocht!"} />
           <a href="/bestel?type=wijnfles" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWijnflessen > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
