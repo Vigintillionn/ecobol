@@ -123,7 +123,7 @@ export default function Bestel() {
       console.log(err.message);
     });
 
-    navigate(`/betaal?prijs=${price}&email=${email}&fName=${firstName}`);
+    navigate(`/betaal?prijs=${price}&email=${email}&fName=${firstName}&payment=${paymentMethod}${takeaway === "delivery" ? "" : `&takeaway=${takeaway}`}`);
   }
 
   return (
