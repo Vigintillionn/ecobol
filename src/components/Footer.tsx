@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="flex-grow w-full text-center mb-4 sm:flex-row sm:text-left sm:w-1/5 md:w-2/12 h-auto ">
             <div className="text-center sm:flex sm:flex-col sm:absolute sm:translate-x-0 sm:right-0 sm:top-6 md:top-2">
               <a href="https://www.vlajo.org/" target="_blank" rel="noreferrer" className="inline-block text-center sm:mr-10 md:mr-16"><img src="/Images/vlajobutton.jpg" className="h-24 w-auto mr-2 sm:mr-0" alt="vlajo" /></a>
-              <a href="https://www.vlajo.org/" target="_blank" rel="noreferrer" className="inline-block text-center mt-2 sm:mr-10 md:mr-16"><img src="/Images/bruultjeshoek.jpg" className="h-24 w-auto ml-2 sm:ml-0" alt="vlajo" /></a>
+              <a href="https://bruultjeshoek.be/" target="_blank" rel="noreferrer" className="inline-block text-center mt-2 sm:mr-10 md:mr-16"><img src="/Images/bruultjeshoek.jpg" className="h-24 w-auto ml-2 sm:ml-0" alt="vlajo" /></a>
             </div>
           </div>
         </div>
