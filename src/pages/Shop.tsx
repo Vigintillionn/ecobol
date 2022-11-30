@@ -15,7 +15,7 @@ export default function Shop() {
   return (
     <div className="min-h-full-nonav pb-8 mx-0 inline-block">
       <div className="w-full text-center m-0 p-0">
-        <p className="pt-8 font-nunito text-lg opacity-80 mx-4 md:mx-24 lg:mx-48 xl:mx-72 2xl:mx-96">Beste klant! Door middel van Examens en meer interesse dan verwacht hebben wij momenteel geen stock meer en zullen wij pas in <span className="font-semibold">December</span> terug beginnen produceren! Wij hopen u dan zeker terug te zien.</p>
+        <p className="pt-8 font-nunito text-lg opacity-80 mx-4 md:mx-24 lg:mx-48 xl:mx-72 2xl:mx-96">Beste klant! Omwille van examens en meer interesse dan verwacht hebben wij momenteel geen stock meer en zullen wij pas in <span className="font-semibold">december</span> terug beginnen produceren! Wij hopen u dan zeker terug te zien.</p>
         <h1 className="pt-8 text-3xl font-mavenpro font-semibold tex">Shop</h1>
         <p className="font-nunito text-lg">Bestel hier een van onze prachtige en klimaatvriendelijke ecobollen!</p>
       </div>
