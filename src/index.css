@@ -5,11 +5,13 @@
 @font-face {
   font-family: "Nunito";
   src: url("../public/Fonts/Nunito-VariableFont_wght.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MavenPro";
   src: url("../public/Fonts/MavenPro-VariableFont_wght.ttf");
+  font-display: swap;
 }
 
 .min-h-full-nonav {
