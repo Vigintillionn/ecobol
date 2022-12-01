@@ -18,6 +18,7 @@ export default function Navbar() {
         md:hidden
         "
         onClick={() => setIsNavExpanded(!isNavExpanded)}
+        aria-label={isNavExpanded ? "Sluit het navigatie menu" : "Open het navigatie menu"}
       >
       <svg
           xmlns="http://www.w3.org/2000/svg"

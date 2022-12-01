@@ -108,9 +108,9 @@ export default function Contact() {
             </div>
             {error.length > 0 && <span className="text-red">{error}</span>}
             {messageSucces && <span className="text-gunmetal">Uw bericht is succesvol verzonden.</span>}
-            <button type="submit" className="bg-blue shadow-lg font-nunito block py-2 px-4 mx-auto my-4 rounded-2xl hover:opacity-80">
+            <button type="submit" className="bg-blue shadow-lg font-nunito block py-2 px-4 mx-auto my-4 rounded-2xl hover:opacity-80" aria-label="Verstuur uw bericht">
               <i className="mr-3"><FontAwesomeIcon icon={faPaperPlane} /></i>
-              Submit
+              Verstuur
             </button>
           </form>
         </div>
