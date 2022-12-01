@@ -25,11 +25,11 @@ export default function Footer() {
           <div className="flex-grow w-full text-center mb-4 sm:text-left sm:w-2/5 md:w-5/12 h-auto ">
             <h2 className="text-lg font-semibold font-mavenpro">Overzicht</h2>
             <ul className="text-black opacity-80 font-nunito">
-              <li><Link className="hover:opacity-50" to="/">Home</Link></li>
-              <li><Link className="hover:opacity-50" to="/over">Over</Link></li>
-              <li><Link className="hover:opacity-50" to="/info">Info</Link></li>
-              <li><Link className="hover:opacity-50" to="/shop">Shop</Link></li>
-              <li><Link className="hover:opacity-50" to="/contact">Contact</Link></li>
+              <li className="py-3 sm:py-0"><Link className="hover:opacity-50" to="/">Home</Link></li>
+              <li className="py-3 sm:py-0"><Link className="my-4 sm:py-0 hover:opacity-50" to="/over">Over</Link></li>
+              <li className="py-3 sm:py-0"><Link className="py-2 sm:py-0 hover:opacity-50" to="/info">Info</Link></li>
+              <li className="py-3 sm:py-0"><Link className="py-2 sm:py-0 hover:opacity-50" to="/shop">Shop</Link></li>
+              <li className="py-3 sm:py-0"><Link className="py-2 sm:py-0 hover:opacity-50" to="/contact">Contact</Link></li>
             </ul>
           </div>
           <div className="flex-grow w-full text-center mb-4 sm:flex-row sm:text-left sm:w-1/5 md:w-2/12 h-auto ">
