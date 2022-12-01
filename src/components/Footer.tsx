@@ -15,7 +15,7 @@ export default function Footer() {
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faPhone}/>+32 489 74 81 73</li>
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faEnvelope}/>info@ecobol.be</li>
               <li>
-                <h4 className="text-lg font-semibold font-mavenpro">Volg ons!</h4>
+                <h2 className="text-lg font-semibold font-mavenpro">Volg ons!</h2>
                 <a aria-label="Link naar onze Facebook" className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
                 <a aria-label="Link naar onze Instagram" className="mx-2 hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
                 <a aria-label="Link naar onze Tiktok" className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>

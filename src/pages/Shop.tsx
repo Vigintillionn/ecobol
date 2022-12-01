@@ -29,7 +29,7 @@ export default function Shop() {
                 <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
                 <div className="shrink-0 w-12 h-12 rounded-full bg-white text-center leading-[3.25rem]"><FontAwesomeIcon className="text-3xl" icon={faWineBottle} /></div>
                 <div>
-                  <h3 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Wijnflessen</h3>
+                  <h2 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Wijnflessen</h2>
                   <span className="text-gunmetal flex gap-2 text-lg font-nunito font-semibold"><p className="line-through text-red">€15</p> <p className="">€12 per fles</p></span>
                 </div>
               </div>
@@ -46,7 +46,7 @@ export default function Shop() {
                 <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
                 <div className="shrink-0 w-12 h-12 rounded-full bg-white text-center leading-[3.25rem]"><FontAwesomeIcon className="text-3xl" icon={faJar} /></div>
                 <div>
-                  <h3 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Weckpotten</h3>
+                  <h2 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Weckpotten</h2>
                   <span className="text-gunmetal text-lg font-nunito font-semibold">€15 per pot</span>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function Shop() {
                 <svg className="w-20 h-20 absolute bottom-full right-0 z-1 card_arc" xmlns="http://www.w3.org/2000/svg"><path fill="#A1C870" d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
                 <div className="shrink-0 w-12 h-12 rounded-full bg-white text-center leading-[3.25rem]"><FontAwesomeIcon className="text-3xl" icon={faBriefcase} /></div>
                 <div>
-                  <h3 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Workshop</h3>
+                  <h2 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Workshop</h2>
                   <span className="text-gunmetal text-lg font-nunito font-semibold">€20 per persoon</span>
                 </div>
               </div>
