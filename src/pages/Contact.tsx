@@ -61,7 +61,7 @@ export default function Contact() {
             <li><FontAwesomeIcon className="mr-3 text-gunmetal" icon={faEnvelope}/>info@ecobol.be</li>
           </ul>
           <div className="lg:absolute lg:bottom-0">
-            <h4 className="text-lg font-mavenpro font-semibold">Sociale Media</h4>
+            <h2 className="text-lg font-mavenpro font-semibold">Sociale Media</h2>
             <a className="mr-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
             <a className="mx-2 text-gunmetal hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
             <a className="mx-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
