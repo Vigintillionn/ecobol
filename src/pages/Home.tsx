@@ -40,7 +40,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-homeImage hidden md:block">
-            <img src="/Images/bgimage.png" alt="" className="w-full h-auto hover:scale-105 transition-transform ease-in-out delay-100" />
+            <img src="/Images/bgimage.png" alt="Een gebotteled ecosysteem, een plant in een doorzichtige glazen wijnfles" className="w-full h-auto hover:scale-105 transition-transform ease-in-out delay-100" />
           </div>
         </div>
         <div className="absolute bottom-0 overflow-hidden">

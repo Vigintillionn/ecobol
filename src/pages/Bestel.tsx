@@ -178,7 +178,7 @@ export default function Bestel() {
         </form>
 
         <div className="transition-all delay-300 ease-in-out inline-block relative overflow-hidden h-full float-right w-[45%] group max-md:hidden">
-          <img className="w-full h-full object-cover transition-transform ease-in-out delay-75 group-hover:scale-105" src={"/Images/" + bottleType +  ".jpg"} alt="" />
+          <img className="w-full h-full object-cover transition-transform ease-in-out delay-75 group-hover:scale-105" src={"/Images/" + bottleType +  ".jpg"} alt={`Een voorstelling van ons product, een plant in een ${bottleType}`} />
           <div className="bg-gunmetal-accent font-nunito transition-all delay-300 ease-in-out -translate-x-full absolute leading-10 text-left text-xl cursor-no-drop text-white h-full w-full left-0 top-0 group-hover:translate-x-0">
             <h2 className="text-center font-mavenpro font-semibold">{toTitleCase(bottleType as string)}</h2>
             <ul className="list-disc">
