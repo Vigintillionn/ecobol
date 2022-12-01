@@ -7,7 +7,7 @@ export default function Over() {
         <h1 className="text-center font-mavenpro text-[2.5rem] text-black font-bold pt-10">Over Ons</h1>
       </div>
       <div className="relative">
-        <img src="/Images/placeholder.png" alt="Onze teamfoto" className="w-[20rem] md:w-[36rem] aspect-[16/9] object-cover absolute left-2/4 -translate-x-2/4 top-2 md:-top-24 -translate-y-2/4" />
+        <img src="/Images/placeholder.webp" alt="Onze teamfoto" className="w-[20rem] md:w-[36rem] aspect-[16/9] object-cover absolute left-2/4 -translate-x-2/4 top-2 md:-top-24 -translate-y-2/4" />
         <div className="pt-28 md:pt-20 mx-[20%] text-center">
           <p>Bij Ecobol, geloven we in een duurzamere maar nog steeds mooie wereld.
             Daarom ontwikkelde wij de EcoBol dat zeer ecologisch, maar nog steeds prachtig is.
@@ -18,7 +18,7 @@ export default function Over() {
         <div className="flex content-center items-center max-lg:flex-wrap flex-row mx-20 md:mx-40 gap-4 mb-8">
 
           <div className="w-full h-full pb-2 bg-green grow sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-            <img src="/Images/placeholder.png" alt="Foto van Yarne Ramakers" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
+            <img src="/Images/placeholder.webp" alt="Foto van Yarne Ramakers" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
             <div className="text-center">  
               <span className="font-mavenpro font-bold text-lg">Yarne Ramakers</span>
               <hr className="w-[80%] ml-[10%]" />
@@ -27,7 +27,7 @@ export default function Over() {
             </div>
           </div>
           <div className="w-full h-full pb-2 bg-green grow sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-            <img src="/Images/placeholder.png" alt="Foto van Robbe Van den put" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
+            <img src="/Images/placeholder.webp" alt="Foto van Robbe Van den put" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
             <div className="text-center">  
               <span className="font-mavenpro font-bold text-lg">Robbe Van den put</span>
               <hr className="w-[80%] ml-[10%]" />
@@ -36,7 +36,7 @@ export default function Over() {
             </div>
           </div>
           <div className="w-full h-full pb-2 bg-green grow sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-            <img src="/Images/placeholder.png" alt="Foto van Daan Pelgrims" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
+            <img src="/Images/placeholder.webp" alt="Foto van Daan Pelgrims" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
             <div className="text-center">  
               <span className="font-mavenpro font-bold text-lg">Daan Pelgrims</span>
               <hr className="w-[80%] ml-[10%]" />
@@ -45,7 +45,7 @@ export default function Over() {
             </div>
           </div>
           <div className="w-full h-full pb-2 bg-green grow sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-            <img src="/Images/placeholder.png" alt="Foto van Nils Delhougne" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
+            <img src="/Images/placeholder.webp" alt="Foto van Nils Delhougne" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
             <div className="text-center">  
               <span className="font-mavenpro font-bold text-lg">Nils Delhougne</span>
               <hr className="w-[80%] ml-[10%]" />
@@ -54,7 +54,7 @@ export default function Over() {
             </div>
           </div>
           <div className="w-full h-full pb-2 bg-green grow sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-            <img src="/Images/placeholder.png" alt="Foto van Pieter Van de Ven" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
+            <img src="/Images/placeholder.webp" alt="Foto van Pieter Van de Ven" className="w-full aspect-[4/3] object-cover overflow-hidden transition-transform ease-in-out delay-100 hover:scale-110" />
             <div className="text-center">  
               <span className="font-mavenpro font-bold text-lg">Pieter Van de Ven</span>
               <hr className="w-[80%] ml-[10%]" />

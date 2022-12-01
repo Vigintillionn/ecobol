@@ -42,7 +42,7 @@ export default function Info() {
               <li><h3>Help mijn fles is aangedampt!</h3>Dit is normaal, ongeveer 2 maal per dag zal er condens vormen aan de rand van de fles en zal het beginnen "regenen" in uw ecosysteem. Dit is de fotosynthese die zijn werk doet en het water in de fles hergebruikt. Indien er heel veel condens vormt of u liever wat minder condens wilt kan u af en toe de fles een dagje open zetten.</li>
             </ul>
           </div>
-          <img src="/Images/infobg.png" className="right w-72 max-lg:h-72 object-cover mr-20 transition-transform ease-in-out delay-100 hover:scale-105 hidden md:inline-block lg:h-72 lg:aspect-square" alt="Een plant in een doorzichtige glazen weckpot" />
+          <img src="/Images/infobg.webp" className="right w-72 max-lg:h-72 object-cover mr-20 transition-transform ease-in-out delay-100 hover:scale-105 hidden md:inline-block lg:h-72 lg:aspect-square" alt="Een plant in een doorzichtige glazen weckpot" />
           
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="z-[100] h-16 w-full flex items-center relative py-2 px-0 bg-white text-black shadow-md md:max-lg:pl-16 lg:max-xl:pl-48 xl:pl-64">
       <Link to="/" className="no-underline text-black text-xl ml-4 flex p-0 relative">
-        <img src="/Images/logo.png" className="w-10 h-auto m-0 absolute top-2/4 -translate-y-2/4" alt="Logo Ecobol, een cartoon plant in een bolle fles" />
+        <img src="/Images/logo.webp" className="w-10 h-auto m-0 absolute top-2/4 -translate-y-2/4" alt="Logo Ecobol, een cartoon plant in een bolle fles" />
         <p className="ml-12 font-mavenpro font-semibold">EcoBol</p>
       </Link>
       <button className="border-0 h-10 w-10 p-2 rounded-full bg-green cursor-pointer transition-colors ease-in-out absolute top-2/4 right-6 -translate-y-2/4 
