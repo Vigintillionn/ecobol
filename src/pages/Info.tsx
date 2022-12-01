@@ -5,7 +5,7 @@ export default function Info() {
     <div className="min-h-full-nonav mx-0">
       <div className="flex flex-col w-full mt-10 lg:mt-20 gap-32">
         <div className="flex flex-row lg:mx-24 gap-16">
-          <img src="/Images/vlajobutton.jpg" className="h-40 w-auto ml-16 hidden md:block" alt="Het logo van VLAJO (vlaamse jongerenonderneming)" />
+          <img src="/Images/vlajobutton.webp" className="h-40 w-auto ml-16 hidden md:block" alt="Het logo van VLAJO (vlaamse jongerenonderneming)" />
           <div className="mx-12 md:mx-20 md:ml-0">
             <h1 className="font-mavenpro text-3xl text-black font-semibold mb-4">Wij zijn een <a href="/" aria-label="Link naar de website van VLAJO" className="underline transition-opacity delay-75 ease-in-out hover:opacity-80">VLAJO</a> onderneming</h1>
             <span className="font-nunito text-gunmetal text-lg">Wij zijn een mini-onderneming van KAKeerbergen onder leiding van VLAJO (Vlaamse Jongerenonderneming) en An Warmoes. Vlajo zorgt ervoor dat wij eens kunnen proeven van het ondernemingsleven. VLAJO "speelt" onze overheid, waar wij BTW aan moeten betalen en een boekhouding aan moeten presenteren. Hierdoor zijn wij ook geen officieel bedrijf en kan je als bedrijf de BTW van ons product niet terugtrekken. Daarom stellen wij het zeker op prijs als u ons feedback kan geven of ons project kan steunen, zodat wij de #1 Vlaamse Jongerendonderneming van 2023 kunnen worden!</span>
