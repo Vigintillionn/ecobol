@@ -62,9 +62,9 @@ export default function Contact() {
           </ul>
           <div className="lg:absolute lg:bottom-0">
             <h2 className="text-lg font-mavenpro font-semibold">Sociale Media</h2>
-            <a className="mr-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
-            <a className="mx-2 text-gunmetal hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
-            <a className="mx-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
+            <a aria-label="Link naar onze Facebook" className="mr-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
+            <a aria-label="Link naar onze Instagram" className="mx-2 text-gunmetal hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
+            <a aria-label="Link naar onze Tiktok" className="mx-2 text-gunmetal hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
           </div>
         </div>
         <div className="w-full flex justify-center items-center mx-auto md:w-[40%]">

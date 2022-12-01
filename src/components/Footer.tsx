@@ -9,21 +9,21 @@ export default function Footer() {
       <div className="">
         <div className="flex flex-wrap mx-24 md:mx-32">
           <div className="flex-grow w-full text-center mb-4 sm:text-left sm:w-2/5 md:w-5/12 h-auto ">
-            <h4 className="text-lg font-semibold font-mavenpro">Contact</h4>
+            <h2 className="text-lg font-semibold font-mavenpro">Contact</h2>
             <ul className="text-black font-nunito">
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faHouse}/>Vlieghavenlaan 18, Keerbergen 3140</li>
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faPhone}/>+32 489 74 81 73</li>
               <li><FontAwesomeIcon className="mr-3 ml-2 opacity-80" icon={faEnvelope}/>info@ecobol.be</li>
               <li>
                 <h4 className="text-lg font-semibold font-mavenpro">Volg ons!</h4>
-                <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
-                <a className="mx-2 hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
-                <a className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
+                <a aria-label="Link naar onze Facebook" className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faFacebook}/></a>
+                <a aria-label="Link naar onze Instagram" className="mx-2 hover:opacity-50" href="https://www.instagram.com/teamecobol/"><FontAwesomeIcon icon={faInstagram}/></a>
+                <a aria-label="Link naar onze Tiktok" className="mx-2 hover:opacity-50" href="/"><FontAwesomeIcon icon={faTiktok}/></a>
               </li>
             </ul>
           </div> 
           <div className="flex-grow w-full text-center mb-4 sm:text-left sm:w-2/5 md:w-5/12 h-auto ">
-            <h4 className="text-lg font-semibold font-mavenpro">Overzicht</h4>
+            <h2 className="text-lg font-semibold font-mavenpro">Overzicht</h2>
             <ul className="text-black opacity-80 font-nunito">
               <li><Link className="hover:opacity-50" to="/">Home</Link></li>
               <li><Link className="hover:opacity-50" to="/over">Over</Link></li>
