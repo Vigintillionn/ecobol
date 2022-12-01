@@ -3,7 +3,7 @@
   "name": "EcobBol Website",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "/Images/logo.png",
       "sizes": "1080x1080",
       "type": "image/png"
     },
