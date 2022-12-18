@@ -21,7 +21,7 @@ export default function Shop() {
       </div>
       <ul className="box-border grid p-0 grid-cols-cards gap-8 my-8 mb-16 list-none overflow-hidden mx-2 min-[400px]:mx-12">
         <li className="relative">
-          <Ribbon text={stockWijnflessen ? "20% Korting!" : "Uitverkocht!"} />
+          {/* <Ribbon text={stockWijnflessen ? "20% Korting!" : "Uitverkocht!"} /> */}
           <a href="/bestel?type=wijnfles" aria-label="Bestel een wijnfles" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWijnflessen > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
             <img src="/Images/wijnfles.webp" alt="Foto van een plant in een doorzichte glazen wijnfles" className="w-full object-cover aspect-square" />
             <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
@@ -30,7 +30,8 @@ export default function Shop() {
                 <div className="shrink-0 w-12 h-12 rounded-full bg-white text-center leading-[3.25rem]"><FontAwesomeIcon className="text-3xl" icon={faWineBottle} /></div>
                 <div>
                   <h2 className="text-black text-xl font-mavenpro mt-0 mx-0 mb-1 uppercase">Wijnflessen</h2>
-                  <span className="text-gunmetal flex gap-2 text-lg font-nunito font-semibold"><p className="line-through text-red">€15</p> <p className="">€12 per fles</p></span>
+                  <span className="text-gunmetal flex gap-2 text-lg font-nunito font-semibold"><p className="">€15 per fles</p></span>
+                  {/* <span className="text-gunmetal flex gap-2 text-lg font-nunito font-semibold"><p className="line-through text-red">€15</p> <p className="">€12 per fles</p></span> */}
                 </div>
               </div>
               <p className="pt-0 px-8 pb-8 m-0 text-black font-nunito overflow-hidden card_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>

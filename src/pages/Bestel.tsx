@@ -66,7 +66,7 @@ export default function Bestel() {
     }
 
     let orderId = uuidv4().split("-")[0];
-    let price = parseInt(amount)*(bottleType === "wijnfles" ? 12 : 15);
+    let price = parseInt(amount)*(bottleType === "wijnfles" ? 15 : 15);
 
     let params = {
       firstName,
@@ -170,7 +170,7 @@ export default function Bestel() {
           </div>
           <div className="absolute bottom-[4%] left-1/4 md:left-[6%]">
             <button type="submit" form="order" id="orderbutton" className="bg-blue transition delay-300 ease-linear rounded-md relative overflow-hidden pointer outline-none border-none text-white p-0 m-0 group hover:bg-blue-darker" aria-label="Plaats uw bestelling">
-              <span className="font-nunito transition-transform delay-300 inline-block px-3 py-5 m-0 text-lg bg-gunmetal border-0 -translate-x-[10%] pr-4 group-hover:-translate-x-[110%]">€{(parseInt(amount)*(bottleType === "wijnfles" ? 12 : 15))},-</span>
+              <span className="font-nunito transition-transform delay-300 inline-block px-3 py-5 m-0 text-lg bg-gunmetal border-0 -translate-x-[10%] pr-4 group-hover:-translate-x-[110%]">€{(parseInt(amount)*(bottleType === "wijnfles" ? 15 : 15))},-</span>
               <span className="font-nunito transition-transform delay-300 inline-block px-3 py-5 m-0 text-lg bg-gunmetal border-0 -translate-x-full absolute z-1 left-0 top-0 group-hover:translate-x-0"><FontAwesomeIcon icon={faShoppingCart} /></span>
               <span className="font-nunito transition-transform delay-300 inline-block px-3 py-5 m-0 text-lg z-10 font-semibold">Bestel Nu</span>
             </button>
