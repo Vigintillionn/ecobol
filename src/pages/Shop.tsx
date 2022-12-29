@@ -9,7 +9,7 @@ export default function Shop() {
   // const [stockWeckpotten, setStockWeckpotten] = useState(0);
 
   // if (setStockWijnflessen && setStockWeckpotten) console.log(1); // TODO: Clean this up
-  let stockWijnflessen = 1, stockWeckpotten = 1;
+  let stockWijnflessen = 1, stockWeckpotten = 0;
   
   // TODO: Make better responsive
   return (
