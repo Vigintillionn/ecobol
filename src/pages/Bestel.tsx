@@ -87,7 +87,7 @@ export default function Bestel() {
       TEMPLATE_ID_ORDER, 
       {
         ...params,
-        delivery: takeaway === "delivery" ? "Ja" : `Nee, afhaalpunt: Pachtersvelden 3, 2580 Putte`,
+        delivery: takeaway === "delivery" ? "Ja" : `Nee, afhaalpunt: ${takeaway === "putte" ? "Pachtersvelden 3, 2580 Putte" : "Putsebaan 49, 3140 Keerbergen"}`,
         paymentMethod: paymentMethod === "online" ? "Bankoverschrijving" : "Cash"
       }, 
       PUBLIC_KEY_YARNE
@@ -110,7 +110,7 @@ export default function Bestel() {
         deliveryTakeaway: takeaway === "delivery" 
           ? `${paymentMethod === "online" ? "Na bevestiging van betaling zal u nog een mail ontvangen en zal uw bestelling klaar gemaakt worden en" : "Eens wij aan uw bestelling beginnen ontvangt u nog een mail en zal uw EcoBol"} binnen 7 dagen geleverd worden op het adres`
           : `${paymentMethod === "online" ? "Na bevestiging van betaling zal u nog een mail ontvangen en zal uw bestelling klaar gemaakt worden" : "Eens wij aan uw bestelling beginnen ontvangt u nog een mail"} en kan u binnen 7 dagen uw EcoBol komen afhalen op uw gekozen afhaalpunt`,
-        messageAddress: takeaway === "delivery" ? `${address}, ${pCode} ${city}` : "Pachtersvelden 3, 2580 Putte",
+        messageAddress: takeaway === "delivery" ? `${address}, ${pCode} ${city}` : takeaway === "putte" ? "Pachtersvelden 3, 2580 Putte" : "Putsebaan 49, 3140 Keerbergen",
         readyMessage: takeaway === "delivery" 
           ? `, u ontvangt nog een mail wanneer wanneer de bezorger met uw EcoBol onderweg is.${paymentMethod === "online" ? "" : " Belangrijk! Indien u niet aanwezig bent bij levering om te betalen nemen wij het pakket terug mee en moet u op een van onze afhaalpunten uw EcoBol komen ophalen, dit wordt afgesproken via mail"}`
           : ""
