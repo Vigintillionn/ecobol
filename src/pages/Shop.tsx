@@ -40,7 +40,7 @@ export default function Shop() {
         </li>
         <li className="relative">
           { stockWeckpotten <= 0 && <Ribbon text="Uitverkocht!"/> }
-          <a href="/bestel?type=weckpot" aria-label="Bestel een weckpot" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWeckpotten > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
+          <a href={stockWeckpotten > 0 ? "/bestel?type=weckpot" : "#"} aria-label="Bestel een weckpot" className={"relative block h-full overflow-hidden no-underline rounded-cards group" + (stockWeckpotten > 0 ? "" : "pointer-events-none cursor-default opacity-50")}>
             <img src="/Images/weckpot.webp" alt="Foto van een plant in een doorzichte glazen weckpot" className="w-full object-cover aspect-square" />
             <div className="absolute bottom-0 left-0 right-0 z-1 rounded-cards bg-green translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
               <div className="relative flex items-center gap-8 p-4 border-tl-cards border-tr-none border-bl-none border-br-none bg-green -translate-y-full transition-transform delay-200 ease-in-out group-hover:translate-y-0">
