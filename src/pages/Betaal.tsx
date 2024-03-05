@@ -32,7 +32,7 @@ export default function Betaal() {
               }
             </p>
              : 
-            <p>Gelieve <span className="font-bold">€{price},-</span> over te schrijven op de rekening <span className="font-bold">BE03 0019 4010 5484</span> met de mededeling <span className="font-bold">Betaling Ecobol: {email}</span>
+            <p>Gelieve <span className="font-bold">€{price},-</span> over te schrijven op de rekening <span className="font-bold">{process.env.REACT_APP_BANK_ACCOUNT}</span> met de mededeling <span className="font-bold">Betaling Ecobol: {email}</span>
               <br />
               <br />
               { takeaway 
