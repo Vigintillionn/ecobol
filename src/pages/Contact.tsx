@@ -4,9 +4,9 @@ import { faEnvelope, faHouse, faPaperPlane, faPencil, faPhone, faUser } from "@f
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useRef, useState } from "react";
 
-const PUBLIC_KEY = "VydYsQWvyQEaGrLIJ";
-const SERVICE_ID = "service_5pg4oe3";
-const TEMPLATE_ID = "template_e06uvyl";
+const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY_CONFIRM;
+const SERVICE_ID = process.env.REACT_APP_ID_CONFIRM;
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_CONFIRM;
 
 export default function Contact() {
   const form = useRef(null) as React.MutableRefObject<HTMLFormElement>;
