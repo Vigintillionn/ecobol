@@ -7,15 +7,14 @@ import { v4 as uuidv4 } from 'uuid';
 import NumericInput from "../components/NumericInput";
 
 // API Settings for Confirmation
-const PUBLIC_KEY_ECOBOL = "IOMMNfJmmwxmjnagL"; // EcoBol
-const SERVICE_ID_ECOBOL = "service_10ctl0q";  // service_p6on5ek
-const TEMPLATE_ID_CONFIRMATION = "template_1ztz5g1";
-// const TEMPLATE_ID_CONFIRMATION_DELIVERY = "template_snv2omo";
+const PUBLIC_KEY_ECOBOL = process.env.REACT_APP_PUBLIC_KEY_CONFIRM;
+const SERVICE_ID_ECOBOL = process.env.REACT_APP_ID_CONFIRM;
+const TEMPLATE_ID_CONFIRMATION = process.env.REACT_APP_TEMPLATE_CONFIRM;
 
 // API-Settings for Order
-const PUBLIC_KEY_YARNE = "VydYsQWvyQEaGrLIJ"; // P Key Yarne
-const SERVICE_ID_YARNE = "service_5pg4oe3"; // Service ID Yarne
-const TEMPLATE_ID_ORDER = "template_5d8ydcy"; // Template Order
+const PUBLIC_KEY_ORDER = process.env.REACT_APP_PUBLIC_KEY_ORDER;
+const SERVICE_ID_ORDER = process.env.REACT_APP_ID_ORDER;
+const TEMPLATE_ID_ORDER = process.env.REACT_APP_TEMPLATE_ORDER;
 
 export default function Bestel() {
   const [searchParams] = useSearchParams();
@@ -83,14 +82,14 @@ export default function Bestel() {
     }
 
     emailjs.send(
-      SERVICE_ID_YARNE, 
+      SERVICE_ID_ORDER, 
       TEMPLATE_ID_ORDER, 
       {
         ...params,
         delivery: takeaway === "delivery" ? "Ja" : `Nee, afhaalpunt: ${takeaway === "putte" ? "Pachtersvelden 3, 2580 Putte" : "Putsebaan 49, 3140 Keerbergen"}`,
         paymentMethod: paymentMethod === "online" ? "Bankoverschrijving" : "Cash"
       }, 
-      PUBLIC_KEY_YARNE
+      PUBLIC_KEY_ORDER
     ).then((res) => {
       console.log(res.text);
     })
